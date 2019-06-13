@@ -69,4 +69,10 @@ strSubset('dog');
 // The setInterval() method calls a function or evaluates an expression at specified intervals
 // (in milliseconds
 
-function clock() {}
+function clock() {
+	var current_date = new Date();
+	console.log(current_date);
+	var date_time = current_date.getHours() + ':' + current_date.getMinutes() + ':' + current_date.getSeconds();
+	console.log(date_time);
+}
+setInterval(clock, 1000);
