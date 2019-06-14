@@ -15,3 +15,18 @@ var obj2 = { k1: 'thym', k2: 'basilic' };
 var obj3 = { k1: 'thym', k2: 'origan' };
 console.log(compare(obj1, obj2));
 console.log(compare(obj1, obj3));
+
+//2. Write a JavaScript program to copy a string to the clipboard.
+var clipboard = new Clipboard('.copy-button', {
+	text: function() {
+		return 'clipboard.js is awesome!';
+	}
+});
+
+//7. Write a JavaScript program to converts a specified number
+//to an array of digits.
+// 12345 => [1,2,3,4,5]
+
+const digitize = (n) => n.toString().split('').map(Number);
+
+console.log(digitize(12345));
