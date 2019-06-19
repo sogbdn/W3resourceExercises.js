@@ -39,3 +39,13 @@ const result = (arr, ...val) => {
 	return arr;
 };
 console.log(result([ 1, 2, 3, 4, 5 ], 1));
+
+//10. Write a JavaScript program to extract out the values at the specified indexes
+//from an specified array.
+
+const result2 = (arr, ...index) => {
+	var res = [];
+	index.forEach((i) => res.push(arr[i]));
+	return res;
+};
+console.log(result2([ 1, 2, 3, 4, 5 ], 1, 2));
