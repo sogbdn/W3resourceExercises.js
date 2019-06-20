@@ -63,3 +63,19 @@ var generate_hexacode = () => {
 	return result.join('');
 };
 console.log(generate_hexacode());
+
+//14. Write a JavaScript program to replace the names
+//of multiple object keys with the values provided
+
+var modify_object = (obj, ...value) => {
+	for (var key in obj) {
+		value.forEach((v) => (obj.key = v));
+	}
+	return obj;
+};
+
+var objet = {
+	k1: 'v1',
+	k2: 'v2'
+};
+console.log(modify_object(objet, 'W1', 'W2'));
