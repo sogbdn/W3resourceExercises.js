@@ -49,3 +49,17 @@ const result2 = (arr, ...index) => {
 	return res;
 };
 console.log(result2([ 1, 2, 3, 4, 5 ], 1, 2));
+
+//11. Write a JavaScript program to generate
+//a random hexadecimal color code.
+
+var generate_hexacode = () => {
+	var result = [ '#' ];
+	var values = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' ];
+	for (let i = 0; i < 6; i++) {
+		var index = Math.round(Math.random() * 17);
+		result.push(values[index]);
+	}
+	return result.join('');
+};
+console.log(generate_hexacode());
