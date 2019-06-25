@@ -119,3 +119,31 @@ var filter_only_nb = (arr) => {
 console.log(filter_only_nb([ 1, 2, 10, 20 ]));
 console.log(filter_only_nb([ 1, 'pluie', 10, 20 ]));
 console.log(filter_only_nb([ 1, { 1: 'oui' }, 10, 20 ]));
+
+// 18. Write a JavaScript program to remove specified
+// elements from the left of a given array of elements.
+
+var remove_elt_arr = (arr, ...elt) => {
+	for (var unit of arr) {
+		elt.forEach(function(elt) {
+			if (unit === elt) {
+				arr.splice(unit, 1);
+			}
+		});
+	}
+	return arr;
+};
+console.log(remove_elt_arr([ 1, 2, 3, 4 ], 1));
+
+//21. Write a JavaScript program to get every
+// nth element in an given array
+var nth_elt_arr = (arr, n) => {
+	var l = arr.length;
+	var res = [];
+	for (var i = n - 1; i < l; i += n) {
+		res.push(arr[i]);
+	}
+	return res;
+};
+
+console.log(nth_elt_arr([ 0, 1, 2, 3, 4, 5 ], 2));
