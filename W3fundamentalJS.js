@@ -79,3 +79,43 @@ var objet = {
 	k2: 'v2'
 };
 console.log(modify_object(objet, 'W1', 'W2'));
+
+// 15. Write a JavaScript program to return the minimum-maximum value
+// of an array, after applying the provided function to set comparing rule.
+
+var min_max = (arr) => {
+	let arr_sorted = arr.sort();
+	let l = arr.length;
+	let result = [];
+	result.push(arr_sorted[0], arr_sorted[l - 1]);
+	return result;
+};
+console.log(min_max([ 2, 1, 0, -10 ]));
+
+//16. Write a JavaScript function that returns true if the provided predicate
+//function returns true for all elements in a collection, false otherwise.
+
+var filter_only_number = (arr) => {
+	for (var elt of arr) {
+		if (typeof elt !== 'number') {
+			return false;
+		}
+	}
+	return true;
+};
+
+console.log(filter_only_number([ 1, 2, 10, 20 ]));
+console.log(filter_only_number([ 1, 'pluie', 10, 20 ]));
+console.log(filter_only_number([ 1, { 1: 'oui' }, 10, 20 ]));
+
+var filter_only_nb = (arr) => {
+	for (var elt of arr) {
+		if (isNaN(elt)) {
+			return false;
+		}
+	}
+	return true;
+};
+console.log(filter_only_nb([ 1, 2, 10, 20 ]));
+console.log(filter_only_nb([ 1, 'pluie', 10, 20 ]));
+console.log(filter_only_nb([ 1, { 1: 'oui' }, 10, 20 ]));
