@@ -1,3 +1,5 @@
+import { isMainThread } from 'worker_threads';
+
 // JavaScript Object
 // 4. Write a JavaScript program to display the reading status (i.e. display book name, author name
 //and reading status) of the following books.
@@ -78,3 +80,14 @@ function clock() {
 var c = setInterval(clock, 1000);
 
 //9. Write a JavaScript program to calculate the area and perimeter of a circle.
+// Create two methods to calculate the area and perimeter.
+// The radius of the circle will be supplied by the user.
+function calculateAera(r) {
+	return Math.PI * r * r;
+}
+function calculatePerimeter(r) {
+	return 2 * Math.PI * r;
+}
+
+console.log(calculateAera(3));
+console.log(calculatePerimeter(3));
