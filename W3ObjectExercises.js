@@ -83,7 +83,7 @@ var c = setInterval(clock, 1000);
 // Create two methods to calculate the area and perimeter.
 // The radius of the circle will be supplied by the user.
 function calculateAera(r) {
-	return Math.PI * r * r;
+	return Math.PI * Math.pow(r, 2);
 }
 function calculatePerimeter(r) {
 	return 2 * Math.PI * r;
