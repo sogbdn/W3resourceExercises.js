@@ -75,4 +75,6 @@ function clock() {
 	var date_time = current_date.getHours() + ':' + current_date.getMinutes() + ':' + current_date.getSeconds();
 	console.log(date_time);
 }
-setInterval(clock, 1000);
+var c = setInterval(clock, 1000);
+
+//9. Write a JavaScript program to calculate the area and perimeter of a circle.
