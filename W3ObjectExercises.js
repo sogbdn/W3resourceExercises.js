@@ -96,7 +96,7 @@ console.log(calculatePerimeter(3));
 
 function objArrSorted(arr) {
 	return arr.sort(function(a, b) {
-		return b.libraryID - a.libraryID;
+		return b.libraryID - a.libraryID; // to sort arr with the value of libraryID
 	});
 }
 var library = [
